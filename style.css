@@ -61,16 +61,30 @@ button {
   border-radius: 0 40px 40px 0;
 }
 
+button:hover {
+  background-color: #3f9fdf;
+  transition: background-color 0.2s ease;
+}
+
+button:active {
+  background-color: #005b96;
+  transition: background-color 0.05s ease;
+  transform: scale(1.02);
+  transition: transform 0.05s ease;
+}
+
 @media (max-width: 768px) {
   .container {
     margin: 70px 30px;
     padding-top: 10px;
   }
+
   input, button {
     font-size: 1.3rem;
     margin: 10px 0px;
     padding: 20px 35px 20px 25px;
   }
+
   h1 {
     font-size: 4rem;
   }
@@ -90,12 +104,24 @@ button {
     padding-top: 10px;
     min-height: 90vh;
   }
+
+  .form {
+    flex-direction: column;
+  }
+
   input, button {
     border-radius: 40px;
     font-size: 1rem;
     margin: 10px 0px;
     padding: 15px 35px 15px 25px;
+    max-width: 70%;
+    align-self: center;
   }
+
+  button:active {
+    transform: scale(1);
+  }
+
   h1 {
     font-size: 2.3rem;
   }
